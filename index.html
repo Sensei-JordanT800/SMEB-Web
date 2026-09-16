@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMEB | Sistema de Monitoreo de Embriones Bovinos</title>
+<meta name="description" content="Sistema de monitoreo reproductivo bovino basado en termografía infrarroja, IoT y análisis de datos. Proyecto InnovaTecNM 2026.">
+
+<!-- Open Graph basico — actualizar "og:image" cuando exista una imagen final -->
+<meta property="og:title" content="SMEB | Sistema de Monitoreo de Embriones Bovinos">
+<meta property="og:description" content="Termografía infrarroja al servicio de la reproducción bovina. Proyecto InnovaTecNM 2026.">
+<meta property="og:type" content="website">
+<!-- <meta property="og:image" content="assets/images/og-cover.jpg"> -->
+
+<!-- FAVICON: agrega el archivo real en assets/icons/ y descomenta -->
+<!-- <link rel="icon" href="assets/icons/favicon.ico"> -->
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#inicio-contenido">Saltar al contenido</a>
+
+<!-- ============================================================
+     NAVEGACION
+     Anclas: Problema, Cómo funciona, Prototipo, Resultados, Tecnología, Futuro
+     Para agregar un enlace nuevo: copia un <li><a> y ajusta el href/id.
+     ============================================================ -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="#inicio">SMEB</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      Menú
+    </button>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#prototipo">Prototipo</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#futuro">Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio-contenido">
+
+  <!-- ============================================================
+       SECCION 01 — HERO
+       ============================================================ -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <p class="hero-eyebrow">InnovaTecNM 2026 · Etapa Regional</p>
+        <h1>SMEB<br><span class="visually-hidden">Sistema de Monitoreo de Embriones Bovinos</span></h1>
+        <p class="hero-tagline">Termografía infrarroja al servicio de la reproducción bovina.</p>
+        <p class="wide">SMEB transforma datos térmicos en información para el monitoreo reproductivo bovino: una propuesta tecnológica no invasiva para apoyar la detección oportuna del celo.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#como-funciona">¿Cómo funciona?</a>
+          <a class="btn btn-secondary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard</a>
+        </div>
+      </div>
+      <!-- REEMPLAZAR: fotografía real de una vaca / equipo, en assets/images/.
+           Mientras no exista, se muestra una ilustración de referencia (no una foto simulada). -->
+      <div class="hero-figure">
+        <img src="assets/images/cow-01.webp" alt="Fotografía de referencia pendiente de sustitución — ver README"
+             onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 300&quot; role=&quot;img&quot; aria-label=&quot;Ilustración de referencia, pendiente de fotografía real&quot;><rect width=&quot;400&quot; height=&quot;300&quot; fill=&quot;%23efe8de&quot;/><ellipse cx=&quot;180&quot; cy=&quot;190&quot; rx=&quot;120&quot; ry=&quot;55&quot; fill=&quot;%238a6b4f&quot; opacity=&quot;0.35&quot;/><circle cx=&quot;90&quot; cy=&quot;150&quot; r=&quot;38&quot; fill=&quot;%238a6b4f&quot; opacity=&quot;0.35&quot;/><text x=&quot;20&quot; y=&quot;270&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Fotografía real pendiente — ver README</text></svg>'">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 02 — EL PROBLEMA
+       ============================================================ -->
+  <section class="section" id="problema">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">El problema</p>
+        <h2>El momento que no puede perderse</h2>
+        <p class="wide">La eficiencia reproductiva es determinante para la rentabilidad ganadera. Detectar el celo en el momento correcto define si una vaca inicia un nuevo ciclo reproductivo a tiempo o si esa oportunidad se pierde.</p>
+      </div>
+      <div class="stat-row">
+        <div class="stat reveal">
+          <span class="stat-number">50–60%</span>
+          <span class="stat-label">Tasa aproximada de detección del celo mediante observación visual</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number">Corta</span>
+          <span class="stat-label">La ventana de fertilidad en la que el celo puede detectarse es breve</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number">~21 días</span>
+          <span class="stat-label">Lo que representa perder un ciclo, hasta la siguiente oportunidad reproductiva</span>
+        </div>
+      </div>
+      <p class="source-note">Datos documentados en la investigación e información del proyecto.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 03 — LA IDEA (transicion narrativa)
+       ============================================================ -->
+  <section class="section section--alt" id="como-funciona">
+    <div class="container">
+      <p class="idea-question">¿Y si pudiéramos detectar cambios fisiológicos sin tocar al animal?</p>
+      <p class="wide" style="margin-top: var(--space-md);">SMEB es una propuesta de monitoreo no invasivo que combina termografía infrarroja, IoT y análisis de datos para apoyar el seguimiento reproductivo bovino.</p>
+      <div class="idea-pillars">
+        <span class="pillar">Termografía infrarroja</span>
+        <span class="pillar">IoT</span>
+        <span class="pillar">Análisis de datos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 04 — EL VIAJE DEL DATO
+       Seccion central del sitio. Etiqueta "Arquitectura propuesta"
+       porque describe la arquitectura tecnologica, no un sistema
+       fisico ya construido y funcionando.
+       ============================================================ -->
+  <section class="section section--dark" id="viaje-del-dato">
+    <div class="container">
+      <div class="section-head">
+        <span class="status-badge status-badge--meta">Arquitectura propuesta</span>
+        <h2 style="margin-top: var(--space-sm);">El viaje del dato</h2>
+        <p class="wide">Así está pensado el recorrido de la información dentro de SMEB, desde el animal hasta la alerta.</p>
+      </div>
+      <ol class="dataflow">
+        <li class="dataflow-step reveal"><h4>Vaca</h4><p>Punto de partida: el animal en su entorno habitual, sin contacto físico necesario para la medición.</p></li>
+        <li class="dataflow-step reveal"><h4>Cámara infrarroja</h4><p>Captura la temperatura superficial de regiones anatómicas específicas.</p></li>
+        <li class="dataflow-step reveal"><h4>ESP32</h4><p>Nodo/controlador que gestiona la captura y el envío de los datos.</p></li>
+        <li class="dataflow-step reveal"><h4>Wi-Fi</h4><p>Conectividad para transmitir la información capturada.</p></li>
+        <li class="dataflow-step reveal"><h4>Nube</h4><p>Almacenamiento centralizado de los datos térmicos.</p></li>
+        <li class="dataflow-step reveal"><h4>Análisis</h4><p>Comparación contra la línea base individual de cada animal.</p></li>
+        <li class="dataflow-step reveal"><h4>Dashboard</h4><p>Visualización del historial, la temperatura y las alertas.</p></li>
+        <li class="dataflow-step reveal"><h4>Alerta</h4><p>Aviso ante un posible evento reproductivo relevante.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 05 — QUE OBSERVAMOS (mapa anatomico interactivo)
+       Los botones funcionan con click/tap Y son accesibles por teclado
+       (no dependen solo de hover).
+       COORDENADAS: son aproximadas sobre una ilustración esquemática,
+       no un dibujo anatomico validado — ajustar si el equipo provee
+       una referencia mas precisa.
+       ============================================================ -->
+  <section class="section" id="que-observamos">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">¿Qué observamos?</p>
+        <h2>Cuatro regiones, cuatro ventanas</h2>
+        <p class="wide">SMEB considera cuatro regiones anatómicas como parte de su estrategia de monitoreo térmico. Toca cada punto para conocer más.</p>
+      </div>
+      <div class="anatomy">
+        <div class="anatomy-figure">
+          <svg viewBox="0 0 400 240" role="img" aria-label="Ilustración esquemática de una vaca con las cuatro zonas monitoreadas">
+            <rect x="90" y="70" width="230" height="95" rx="47" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
+            <circle cx="65" cy="95" r="38" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
+            <ellipse cx="40" cy="75" rx="10" ry="16" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
+            <line x1="120" y1="160" x2="120" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
+            <line x1="170" y1="160" x2="170" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
+            <line x1="250" y1="160" x2="250" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
+            <line x1="295" y1="160" x2="295" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
+            <line x1="318" y1="90" x2="335" y2="150" stroke="var(--color-earth)" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <button class="anatomy-hotspot" type="button" data-zone="ocular" aria-pressed="true" style="left: 16%; top: 40%;">
+            <span aria-hidden="true">1</span><span class="visually-hidden">Región ocular</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="abdominal" aria-pressed="false" style="left: 47%; top: 66%;">
+            <span aria-hidden="true">2</span><span class="visually-hidden">Región abdominal / media</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="mamaria" aria-pressed="false" style="left: 68%; top: 76%;">
+            <span aria-hidden="true">3</span><span class="visually-hidden">Región mamaria</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="vulvar" aria-pressed="false" style="left: 80%; top: 62%;">
+            <span aria-hidden="true">4</span><span class="visually-hidden">Región vulvar</span>
+          </button>
+        </div>
+        <div class="anatomy-list">
+          <div class="anatomy-panel" data-zone="ocular">
+            <h4>Región ocular</h4>
+            <p class="wide">Zona del ojo, considerada dentro de las regiones monitoreadas por su sensibilidad a cambios fisiológicos.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="abdominal" hidden>
+            <h4>Región abdominal / media</h4>
+            <p class="wide">Zona media del cuerpo del animal, incluida como parte de la estrategia de monitoreo.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="mamaria" hidden>
+            <h4>Región mamaria</h4>
+            <p class="wide">Zona de la ubre, considerada por su relación con procesos fisiológicos del ciclo reproductivo.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="vulvar" hidden>
+            <h4>Región vulvar</h4>
+            <p class="wide">Zona vulvar, una de las regiones anatómicas contempladas en el protocolo de monitoreo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 06 — DEL DATO A LA DECISION
+       ============================================================ -->
+  <section class="section section--alt" id="dato-a-decision">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Del dato a la decisión</p>
+        <h2>Cada vaca, su propia referencia</h2>
+      </div>
+      <div class="decision-flow">
+        <div class="decision-step"><h4>Captura térmica</h4><p>Se registra la temperatura de las regiones consideradas.</p></div>
+        <div class="decision-step"><h4>Línea base individual</h4><p>Cada animal cuenta con su propia referencia histórica.</p></div>
+        <div class="decision-step"><h4>Comparación</h4><p>El dato nuevo se compara contra esa línea base, no contra un valor fijo.</p></div>
+        <div class="decision-step"><h4>Detección de variación</h4><p>Se identifican cambios relevantes respecto al comportamiento individual.</p></div>
+        <div class="decision-step"><h4>Alerta</h4><p>Se genera un aviso cuando la variación es consistente con el protocolo.</p></div>
+        <div class="decision-step"><h4>Decisión</h4><p>La información queda disponible para apoyar la decisión del productor o del médico veterinario.</p></div>
+      </div>
+      <div class="decision-note">
+        <p>SMEB no interpreta el sistema como "temperatura alta = celo". El concepto se basa en comparar cada animal contra su propia línea base individual.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 07 — NUESTRO PRINCIPAL PROTOTIPO (dashboard)
+       IMPORTANTE: la URL del dashboard vive en js/script.js si se
+       necesita referenciar por JS; aquí está directamente en el href.
+       ============================================================ -->
+  <section class="section" id="prototipo">
+    <div class="container prototype-grid">
+      <div>
+        <span class="status-badge status-badge--demonstrated">Prototipo</span>
+        <h2 style="margin-top: var(--space-sm);">Del concepto a una plataforma</h2>
+        <p class="wide">Desarrollamos un prototipo de plataforma web para visualizar el monitoreo térmico, las alertas y el seguimiento individual de los animales. Es nuestro principal prototipo demostrable actualmente: no representa un sistema físico completo ya instalado y conectado en campo.</p>
+        <div class="btn-row">
+          <!-- CAMBIAR ESTE ENLACE SI EL DASHBOARD CAMBIA DE URL -->
+          <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard</a>
+        </div>
+      </div>
+      <!-- REEMPLAZAR: captura de pantalla real del dashboard, en assets/dashboard/ -->
+      <div class="prototype-figure">
+        <img src="assets/dashboard/dashboard-main.webp" alt="Captura del dashboard pendiente de sustitución — ver README"
+             onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 250&quot; role=&quot;img&quot; aria-label=&quot;Espacio para captura real del dashboard&quot;><rect width=&quot;400&quot; height=&quot;250&quot; fill=&quot;%23eae7dc&quot;/><rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;360&quot; height=&quot;30&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;20&quot; y=&quot;65&quot; width=&quot;170&quot; height=&quot;80&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;210&quot; y=&quot;65&quot; width=&quot;170&quot; height=&quot;80&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;20&quot; y=&quot;160&quot; width=&quot;360&quot; height=&quot;60&quot; fill=&quot;%23d8d5c7&quot;/><text x=&quot;20&quot; y=&quot;235&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Captura real del dashboard pendiente — ver README</text></svg>'">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 08 — LO QUE YA DEMOSTRAMOS
+       ============================================================ -->
+  <section class="section section--alt" id="resultados">
+    <div class="container">
+      <span class="status-badge status-badge--demonstrated">Demostrado</span>
+      <h2 style="margin-top: var(--space-sm);">Lo que ya demostramos</h2>
+      <p class="wide">Una primera prueba de concepto con captura manual de datos, no una validación estadística definitiva del sistema completo.</p>
+
+      <div class="counter-row">
+        <div class="stat reveal">
+          <span class="counter-number" data-counter-target="14">0</span>
+          <span class="stat-label">Vacas monitoreadas</span>
+        </div>
+        <div class="stat reveal">
+          <span class="counter-number" data-counter-target="5">0</span>
+          <span class="stat-label">Días de prueba</span>
+        </div>
+        <div class="stat reveal">
+          <span class="counter-number" data-counter-target="4">0</span>
+          <span class="stat-label">Zonas monitoreadas</span>
+        </div>
+      </div>
+
+      <p style="margin-top: var(--space-lg);"><strong>Razas incluidas:</strong></p>
+      <div class="tag-row">
+        <span class="tag">Suiza</span>
+        <span class="tag">Simbrah-Suiza</span>
+        <span class="tag">Charolaiz</span>
+        <span class="tag">Suiza-Brahma</span>
+      </div>
+      <p style="margin-top: var(--space-sm);"><strong>Edades:</strong> 3–8 años.</p>
+
+      <div class="case-card">
+        <span class="status-badge status-badge--demonstrated">Caso destacado</span>
+        <h3 style="margin-top: var(--space-sm);">Vaca #7</h3>
+        <p class="wide">Durante el día 4 se registró una temperatura ocular de 38.2 °C, considerada consistente con el umbral establecido en el protocolo para emitir una alerta.</p>
+        <blockquote>“Este resultado confirma que el sistema puede detectar celo de forma manual hoy, y de forma automatizada mañana.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 09 — SMEB VS METODOS CONVENCIONALES
+       ============================================================ -->
+  <section class="section" id="comparacion">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">SMEB frente a métodos convencionales</p>
+        <h2>Una comparación conceptual</h2>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Observación visual</th>
+              <th scope="col">Métodos tradicionales</th>
+              <th scope="col">SMEB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Contacto físico</th>
+              <td data-value="yes">Frecuente</td>
+              <td data-value="yes">Frecuente</td>
+              <td data-value="no">Sin contacto</td>
+            </tr>
+            <tr>
+              <th scope="row">Continuidad</th>
+              <td data-value="no">Puntual</td>
+              <td data-value="no">Puntual</td>
+              <td data-value="partial">Capturas programadas</td>
+            </tr>
+            <tr>
+              <th scope="row">Automatización</th>
+              <td data-value="no">No</td>
+              <td data-value="no">No</td>
+              <td data-value="partial">Contemplada como meta</td>
+            </tr>
+            <tr>
+              <th scope="row">Monitoreo remoto</th>
+              <td data-value="no">No</td>
+              <td data-value="no">No</td>
+              <td data-value="yes">A través del dashboard</td>
+            </tr>
+            <tr>
+              <th scope="row">Análisis basado en datos</th>
+              <td data-value="no">No</td>
+              <td data-value="partial">Limitado</td>
+              <td data-value="yes">Comparación contra línea base individual</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">SMEB se presenta como una herramienta tecnológica de apoyo, no como sustituto de la atención veterinaria.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 10 — TECNOLOGIA
+       ============================================================ -->
+  <section class="section section--alt" id="tecnologia">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Tecnología</p>
+        <h2>Componentes del sistema</h2>
+      </div>
+
+      <h3 style="font-size: var(--step-1);">Tecnología contemplada <span class="status-badge status-badge--meta">Meta</span></h3>
+      <div class="card-grid card-grid--3" style="margin-top: var(--space-sm);">
+        <div class="card tech-card"><h4>Termografía infrarroja</h4><p>Captura de temperatura superficial mediante cámara infrarroja.</p></div>
+        <div class="card tech-card"><h4>ESP32</h4><p>Controlador para la captura y transmisión de datos.</p></div>
+        <div class="card tech-card"><h4>Wi-Fi</h4><p>Conectividad para el envío de información a la nube.</p></div>
+      </div>
+
+      <h3 style="font-size: var(--step-1); margin-top: var(--space-lg);">Prototipo actualmente demostrable <span class="status-badge status-badge--demonstrated">Demostrado</span></h3>
+      <div class="card-grid card-grid--3" style="margin-top: var(--space-sm);">
+        <div class="card tech-card"><h4>Nube</h4><p>Almacenamiento de la información registrada.</p></div>
+        <div class="card tech-card"><h4>Plataforma web</h4><p>Dashboard funcional para visualizar historial y alertas.</p></div>
+        <div class="card tech-card"><h4>Análisis de datos</h4><p>Comparación contra la línea base individual de cada animal.</p></div>
+      </div>
+      <p class="source-note" style="margin-top: var(--space-md);">La cámara física y la infraestructura IoT completa forman parte del desarrollo tecnológico propuesto. El dashboard constituye nuestro principal prototipo actual.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 11 — IMPACTO
+       ============================================================ -->
+  <section class="section" id="impacto">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Impacto</p>
+        <h2>Hacia dónde apunta SMEB</h2>
+      </div>
+      <div class="card-grid card-grid--4">
+        <div class="impact-card reveal"><h4>Reproducción</h4><p>Mejor seguimiento de eventos reproductivos.</p></div>
+        <div class="impact-card reveal"><h4>Bienestar animal</h4><p>Monitoreo sin contacto físico.</p></div>
+        <div class="impact-card reveal"><h4>Productividad</h4><p>Información para apoyar decisiones reproductivas.</p></div>
+        <div class="impact-card reveal"><h4>Transformación digital</h4><p>Aplicación de IoT y análisis de datos al sector agropecuario.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 12 — LO QUE QUEREMOS LOGRAR (metas)
+       ============================================================ -->
+  <section class="section section--alt" id="futuro">
+    <div class="container">
+      <span class="status-badge status-badge--meta">Metas</span>
+      <h2 style="margin-top: var(--space-sm);">Lo que queremos lograr</h2>
+      <ul class="goal-list">
+        <li>Construir e integrar el sistema físico.</li>
+        <li>Automatizar la captura de datos.</li>
+        <li>Validar el sistema con un número mayor de animales.</li>
+        <li>Mejorar la detección automatizada.</li>
+        <li>Desarrollar el monitoreo reproductivo continuo.</li>
+        <li>Ampliar la plataforma.</li>
+        <li>Realizar pruebas en condiciones reales de producción.</li>
+      </ul>
+      <div class="goal-metric">
+        <span class="stat-number">≥85%</span>
+        <span class="stat-label">Meta de detección de celo (no un resultado actual)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 13 — MODELO DE IMPLEMENTACION
+       Sin cifras economicas, solo concepto.
+       ============================================================ -->
+  <section class="section" id="modelo">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Modelo de implementación</p>
+        <h2>Cómo se pondría en marcha</h2>
+      </div>
+      <div class="card-grid model-grid">
+        <div class="card model-card"><h4>Implementación</h4><p>Instalación y puesta en marcha.</p></div>
+        <div class="card model-card"><h4>Plataforma</h4><p>Visualización y seguimiento de información.</p></div>
+        <div class="card model-card"><h4>Mantenimiento</h4><p>Soporte y continuidad tecnológica.</p></div>
+        <div class="card model-card"><h4>Escalabilidad</h4><p>Posibilidad de adaptar el sistema a diferentes tamaños de producción.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCION 14 — CIERRE
+       Enlaces sociales: agregar solo cuando existan URLs reales
+       (ver bloque comentado abajo).
+       ============================================================ -->
+  <section class="section section--dark closing" id="contacto">
+    <div class="container">
+      <p class="closing-quote">La ciencia identifica el problema.<br>La tecnología nos permite observarlo de otra manera.</p>
+      <h2>SMEB</h2>
+      <p style="color:#cdd3c6;">Sistema de Monitoreo de Embriones Bovinos</p>
+      <p class="closing-brand">InnovaTecNM 2026 · Instituto Tecnológico de Nuevo León</p>
+      <div class="btn-row" style="margin-top: var(--space-md);">
+        <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explorar el dashboard</a>
+      </div>
+      <!-- AGREGAR REDES SOCIALES REALES AQUI cuando el equipo las confirme:
+      <div class="btn-row" style="margin-top: var(--space-sm);">
+        <a class="btn btn-secondary" href="https://instagram.com/___" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-secondary" href="https://facebook.com/___" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p style="margin:0;">SMEB — InnovaTecNM 2026. Sitio informativo del proyecto.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
