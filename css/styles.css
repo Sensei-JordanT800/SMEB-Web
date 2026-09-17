@@ -502,6 +502,11 @@ button:focus-visible,
   .anatomy { grid-template-columns: 1fr 1fr; }
 }
 .anatomy-figure { position: relative; }
+
+ .anatomy-figure img { width: 100%; border-radius: var(--radius); 
+  border: 1px solid var(--color-line); 
+}
+
 .anatomy-hotspot {
   position: absolute;
   width: 2rem;

@@ -153,58 +153,51 @@
        no un dibujo anatomico validado — ajustar si el equipo provee
        una referencia mas precisa.
        ============================================================ -->
-  <section class="section" id="que-observamos">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">¿Qué observamos?</p>
-        <h2>Cuatro regiones, cuatro ventanas</h2>
-        <p class="wide">SMEB considera cuatro regiones anatómicas como parte de su estrategia de monitoreo térmico. Toca cada punto para conocer más.</p>
-      </div>
-      <div class="anatomy">
-        <div class="anatomy-figure">
-          <svg viewBox="0 0 400 240" role="img" aria-label="Ilustración esquemática de una vaca con las cuatro zonas monitoreadas">
-            <rect x="90" y="70" width="230" height="95" rx="47" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
-            <circle cx="65" cy="95" r="38" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
-            <ellipse cx="40" cy="75" rx="10" ry="16" fill="var(--color-earth-soft)" stroke="var(--color-earth)" stroke-width="2"/>
-            <line x1="120" y1="160" x2="120" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="170" y1="160" x2="170" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="250" y1="160" x2="250" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="295" y1="160" x2="295" y2="215" stroke="var(--color-earth)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="318" y1="90" x2="335" y2="150" stroke="var(--color-earth)" stroke-width="6" stroke-linecap="round"/>
-          </svg>
-          <button class="anatomy-hotspot" type="button" data-zone="ocular" aria-pressed="true" style="left: 16%; top: 40%;">
-            <span aria-hidden="true">1</span><span class="visually-hidden">Región ocular</span>
-          </button>
-          <button class="anatomy-hotspot" type="button" data-zone="abdominal" aria-pressed="false" style="left: 47%; top: 66%;">
-            <span aria-hidden="true">2</span><span class="visually-hidden">Región abdominal / media</span>
-          </button>
-          <button class="anatomy-hotspot" type="button" data-zone="mamaria" aria-pressed="false" style="left: 68%; top: 76%;">
-            <span aria-hidden="true">3</span><span class="visually-hidden">Región mamaria</span>
-          </button>
-          <button class="anatomy-hotspot" type="button" data-zone="vulvar" aria-pressed="false" style="left: 80%; top: 62%;">
-            <span aria-hidden="true">4</span><span class="visually-hidden">Región vulvar</span>
-          </button>
-        </div>
-        <div class="anatomy-list">
-          <div class="anatomy-panel" data-zone="ocular">
-            <h4>Región ocular</h4>
-            <p class="wide">Zona del ojo, considerada dentro de las regiones monitoreadas por su sensibilidad a cambios fisiológicos.</p>
-          </div>
-          <div class="anatomy-panel" data-zone="abdominal" hidden>
-            <h4>Región abdominal / media</h4>
-            <p class="wide">Zona media del cuerpo del animal, incluida como parte de la estrategia de monitoreo.</p>
-          </div>
-          <div class="anatomy-panel" data-zone="mamaria" hidden>
-            <h4>Región mamaria</h4>
-            <p class="wide">Zona de la ubre, considerada por su relación con procesos fisiológicos del ciclo reproductivo.</p>
-          </div>
-          <div class="anatomy-panel" data-zone="vulvar" hidden>
-            <h4>Región vulvar</h4>
-            <p class="wide">Zona vulvar, una de las regiones anatómicas contempladas en el protocolo de monitoreo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section class="section" id="que-observamos"> 
+    <div class="container"> 
+      <div class="section-head"> 
+        <p class="eyebrow">¿Qué observamos?</p> 
+        <h2>Cuatro regiones, cuatro ventanas</h2> 
+        <p class="wide">SMEB considera cuatro regiones anatómicas como parte de su estrategia de monitoreo térmico. Toca cada punto para conocer más.</p> 
+      </div> 
+      <div class="anatomy"> 
+        <div class="anatomy-figure"> 
+          <!-- REEMPLAZAR: foto de vaca de perfil, en assets/images/vaca-zonas.webp --> 
+           <img src="assets/images/vaca-areas2.webp" alt="Vaca de perfil con las cuatro regiones monitoreadas señaladas" loading="lazy"> 
+           <button class="anatomy-hotspot" type="button" data-zone="ocular" aria-pressed="true" style="left: 80%; top: 34%;"> 
+            <span aria-hidden="true">1</span>
+            <span class="visually-hidden">Región ocular</span> 
+          </button> 
+          <button class="anatomy-hotspot" type="button" data-zone="abdominal" aria-pressed="false" style="left: 52%; top: 52%;"> 
+            <span aria-hidden="true">2</span><span class="visually-hidden">Región abdominal media</span> 
+          </button> 
+          <button class="anatomy-hotspot" type="button" data-zone="mamaria" aria-pressed="false" style="left: 32%; top: 58%;"> 
+            <span aria-hidden="true">3</span><span class="visually-hidden">Región mamaria</span> 
+          </button> 
+          <button class="anatomy-hotspot" type="button" data-zone="vulvar" aria-pressed="false" style="left: 18%; top: 44%;"> 
+            <span aria-hidden="true">4</span><span class="visually-hidden">Región vulvar</span> 
+          </button> 
+        </div> 
+        <div class="anatomy-list"> 
+          <div class="anatomy-panel" data-zone="ocular"> 
+            <h4>Región ocular</h4> 
+            <p class="wide">Zona del ojo, considerada dentro de las regiones monitoreadas por su sensibilidad a cambios fisiológicos.</p> 
+          </div> 
+          <div class="anatomy-panel" data-zone="abdominal" hidden> 
+            <h4>Región abdominal / media</h4> 
+            <p class="wide">Zona media del cuerpo del animal, incluida como parte de la estrategia de monitoreo.</p> 
+          </div> 
+          <div class="anatomy-panel" data-zone="mamaria" hidden> 
+            <h4>Región mamaria</h4> 
+            <p class="wide">Zona de la ubre, considerada por su relación con procesos fisiológicos del ciclo reproductivo.</p> 
+          </div> 
+          <div class="anatomy-panel" data-zone="vulvar" hidden> 
+            <h4>Región vulvar</h4> 
+            <p class="wide">Zona vulvar, una de las regiones anatómicas contempladas en el protocolo de monitoreo.</p> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
   </section>
 
   <!-- ============================================================
