@@ -2,11 +2,12 @@
    SMEB — SITIO WEB INFORMATIVO
    JavaScript principal (sin dependencias externas)
 
-   Este archivo hace 4 cosas, cada una en su propia funcion:
+   Este archivo hace 5 cosas, cada una en su propia funcion:
    1. initNav()      -> abre/cierra el menu movil
    2. initReveal()    -> revela secciones al hacer scroll (IntersectionObserver)
    3. initCounters()  -> anima las cifras grandes de "Lo que ya demostramos"
    4. initAnatomy()   -> maneja el mapa anatomico interactivo (tap/click, no solo hover)
+   5. initPrototypeGallery() -> alterna entre las vistas reales del dashboard
 
    Para agregar una nueva seccion animada: agrega la clase "reveal" al
    elemento en el HTML, initReveal() la detecta automaticamente.
@@ -138,10 +139,33 @@
     });
   }
 
+  /* ---------- 5. Galeria del prototipo (dashboard) ---------- */
+  function initPrototypeGallery() {
+    var tabs = document.querySelectorAll(".prototype-tab");
+    var views = document.querySelectorAll(".prototype-figure [data-view]");
+    if (!tabs.length) return;
+
+    function showView(view) {
+      tabs.forEach(function (t) {
+        t.setAttribute("aria-pressed", String(t.getAttribute("data-view") === view));
+      });
+      views.forEach(function (v) {
+        v.hidden = v.getAttribute("data-view") !== view;
+      });
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        showView(tab.getAttribute("data-view"));
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initReveal();
     initCounters();
     initAnatomy();
+    initPrototypeGallery();
   });
 })();

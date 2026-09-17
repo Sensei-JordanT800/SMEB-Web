@@ -6,11 +6,11 @@
 <title>SMEB | Sistema de Monitoreo de Embriones Bovinos</title>
 <meta name="description" content="Sistema de monitoreo reproductivo bovino basado en termografía infrarroja, IoT y análisis de datos. Proyecto InnovaTecNM 2026.">
 
-<!-- Open Graph basico — actualizar "og:image" cuando exista una imagen final -->
+<!-- Open Graph basico -->
 <meta property="og:title" content="SMEB | Sistema de Monitoreo de Embriones Bovinos">
 <meta property="og:description" content="Termografía infrarroja al servicio de la reproducción bovina. Proyecto InnovaTecNM 2026.">
 <meta property="og:type" content="website">
-<!-- <meta property="og:image" content="assets/images/og-cover.jpg"> -->
+<meta property="og:image" content="assets/logos/SMEB-logo.webp">
 
 <!-- FAVICON: agrega el archivo real en assets/icons/ y descomenta -->
 <link rel="icon" href="assets/icons/favicon.ico">
@@ -60,11 +60,10 @@
         <p class="wide">SMEB transforma datos térmicos en información para el monitoreo reproductivo bovino: una propuesta tecnológica no invasiva para apoyar la detección oportuna del celo.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#como-funciona">¿Cómo funciona?</a>
-          <a class="btn btn-secondary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard</a>
+          <a class="btn btn-secondary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
         </div>
       </div>
-      <!-- REEMPLAZAR: logotipo real de SMEB, en assets/logos/. --> 
-       <div class="hero-figure hero-figure--logo"> 
+       <div class="hero-figure hero-figure--logo">
         <img src="assets/logos/SMEB-logo.webp" alt="Logotipo de SMEB" 
         onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 300&quot; role=&quot;img&quot; aria-label=&quot;Espacio para logotipo, pendiente de agregar&quot;><rect width=&quot;400&quot; height=&quot;300&quot; fill=&quot;%23ffffff&quot;/><text x=&quot;20&quot; y=&quot;150&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Logotipo pendiente — ver README</text></svg>'"> 
       </div>
@@ -112,10 +111,9 @@
           <span class="pillar">Análisis de datos</span> 
         </div> 
       </div> 
-      <!-- REEMPLAZAR: fotografía real de un integrante del equipo realizando una medición, en assets/images/. --> 
-       <div class="hero-figure"> 
-        <img src="assets/images/cow-01.webp" alt="Integrante del equipo realizando una medición" onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 300&quot; role=&quot;img&quot; aria-label=&quot;Espacio para fotografía del equipo, pendiente de agregar&quot;><rect width=&quot;400&quot; height=&quot;300&quot; fill=&quot;%23efe8de&quot;/><text x=&quot;20&quot; y=&quot;270&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Fotografía del equipo pendiente — ver README</text></svg>'"> 
-      </div> 
+       <div class="hero-figure">
+        <img src="assets/images/cow-01.webp" alt="Integrante del equipo realizando una medición" loading="lazy" onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 300&quot; role=&quot;img&quot; aria-label=&quot;Espacio para fotografía del equipo, pendiente de agregar&quot;><rect width=&quot;400&quot; height=&quot;300&quot; fill=&quot;%23efe8de&quot;/><text x=&quot;20&quot; y=&quot;270&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Fotografía del equipo pendiente — ver README</text></svg>'">
+      </div>
     </div> 
   </section>
 
@@ -153,51 +151,50 @@
        no un dibujo anatomico validado — ajustar si el equipo provee
        una referencia mas precisa.
        ============================================================ -->
-  <section class="section" id="que-observamos"> 
-    <div class="container"> 
-      <div class="section-head"> 
-        <p class="eyebrow">¿Qué observamos?</p> 
-        <h2>Cuatro regiones, cuatro ventanas</h2> 
-        <p class="wide">SMEB considera cuatro regiones anatómicas como parte de su estrategia de monitoreo térmico. Toca cada punto para conocer más.</p> 
-      </div> 
-      <div class="anatomy"> 
-        <div class="anatomy-figure"> 
-          <!-- REEMPLAZAR: foto de vaca de perfil, en assets/images/vaca-zonas.webp --> 
-           <img src="assets/images/vaca-areas2.webp" alt="Vaca de perfil con las cuatro regiones monitoreadas señaladas" loading="lazy"> 
-           <button class="anatomy-hotspot" type="button" data-zone="ocular" aria-pressed="true" style="left: 80%; top: 34%;"> 
+  <section class="section" id="que-observamos">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">¿Qué observamos?</p>
+        <h2>Cuatro regiones, cuatro ventanas</h2>
+        <p class="wide">SMEB considera cuatro regiones anatómicas como parte de su estrategia de monitoreo térmico. Toca cada punto para conocer más.</p>
+      </div>
+      <div class="anatomy">
+        <div class="anatomy-figure">
+           <img src="assets/images/vaca-areas2.webp" alt="Vaca de perfil con las cuatro regiones monitoreadas señaladas" loading="lazy">
+           <button class="anatomy-hotspot" type="button" data-zone="ocular" aria-pressed="true" style="left: 80%; top: 34%;">
             <span aria-hidden="true">1</span>
-            <span class="visually-hidden">Región ocular</span> 
-          </button> 
-          <button class="anatomy-hotspot" type="button" data-zone="abdominal" aria-pressed="false" style="left: 52%; top: 52%;"> 
-            <span aria-hidden="true">2</span><span class="visually-hidden">Región abdominal media</span> 
-          </button> 
-          <button class="anatomy-hotspot" type="button" data-zone="mamaria" aria-pressed="false" style="left: 32%; top: 58%;"> 
-            <span aria-hidden="true">3</span><span class="visually-hidden">Región mamaria</span> 
-          </button> 
-          <button class="anatomy-hotspot" type="button" data-zone="vulvar" aria-pressed="false" style="left: 18%; top: 44%;"> 
-            <span aria-hidden="true">4</span><span class="visually-hidden">Región vulvar</span> 
-          </button> 
-        </div> 
-        <div class="anatomy-list"> 
-          <div class="anatomy-panel" data-zone="ocular"> 
-            <h4>Región ocular</h4> 
-            <p class="wide">Zona del ojo, considerada dentro de las regiones monitoreadas por su sensibilidad a cambios fisiológicos.</p> 
-          </div> 
-          <div class="anatomy-panel" data-zone="abdominal" hidden> 
-            <h4>Región abdominal / media</h4> 
-            <p class="wide">Zona media del cuerpo del animal, incluida como parte de la estrategia de monitoreo.</p> 
-          </div> 
-          <div class="anatomy-panel" data-zone="mamaria" hidden> 
-            <h4>Región mamaria</h4> 
-            <p class="wide">Zona de la ubre, considerada por su relación con procesos fisiológicos del ciclo reproductivo.</p> 
-          </div> 
-          <div class="anatomy-panel" data-zone="vulvar" hidden> 
-            <h4>Región vulvar</h4> 
-            <p class="wide">Zona vulvar, una de las regiones anatómicas contempladas en el protocolo de monitoreo.</p> 
-          </div> 
-        </div> 
-      </div> 
-    </div> 
+            <span class="visually-hidden">Región ocular</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="abdominal" aria-pressed="false" style="left: 52%; top: 52%;">
+            <span aria-hidden="true">2</span><span class="visually-hidden">Región abdominal media</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="mamaria" aria-pressed="false" style="left: 32%; top: 58%;">
+            <span aria-hidden="true">3</span><span class="visually-hidden">Región mamaria</span>
+          </button>
+          <button class="anatomy-hotspot" type="button" data-zone="vulvar" aria-pressed="false" style="left: 18%; top: 44%;">
+            <span aria-hidden="true">4</span><span class="visually-hidden">Región vulvar</span>
+          </button>
+        </div>
+        <div class="anatomy-list" aria-live="polite">
+          <div class="anatomy-panel" data-zone="ocular">
+            <h4>Región ocular</h4>
+            <p class="wide">Zona del ojo, considerada dentro de las regiones monitoreadas por su sensibilidad a cambios fisiológicos.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="abdominal" hidden>
+            <h4>Región abdominal / media</h4>
+            <p class="wide">Zona media del cuerpo del animal, incluida como parte de la estrategia de monitoreo.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="mamaria" hidden>
+            <h4>Región mamaria</h4>
+            <p class="wide">Zona de la ubre, considerada por su relación con procesos fisiológicos del ciclo reproductivo.</p>
+          </div>
+          <div class="anatomy-panel" data-zone="vulvar" hidden>
+            <h4>Región vulvar</h4>
+            <p class="wide">Zona vulvar, una de las regiones anatómicas contempladas en el protocolo de monitoreo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ============================================================
@@ -236,13 +233,22 @@
         <p class="wide">Desarrollamos un prototipo de plataforma web para visualizar el monitoreo térmico, las alertas y el seguimiento individual de los animales. Es nuestro principal prototipo demostrable actualmente: no representa un sistema físico completo ya instalado y conectado en campo.</p>
         <div class="btn-row">
           <!-- CAMBIAR ESTE ENLACE SI EL DASHBOARD CAMBIA DE URL -->
-          <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard</a>
+          <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explora el dashboard<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
         </div>
       </div>
-      <!-- REEMPLAZAR: captura de pantalla real del dashboard, en assets/dashboard/ -->
-      <div class="prototype-figure">
-        <img src="assets/dashboard/dashboard-main.webp" alt="Captura del dashboard pendiente de sustitución — ver README"
-             onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 400 250&quot; role=&quot;img&quot; aria-label=&quot;Espacio para captura real del dashboard&quot;><rect width=&quot;400&quot; height=&quot;250&quot; fill=&quot;%23eae7dc&quot;/><rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;360&quot; height=&quot;30&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;20&quot; y=&quot;65&quot; width=&quot;170&quot; height=&quot;80&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;210&quot; y=&quot;65&quot; width=&quot;170&quot; height=&quot;80&quot; fill=&quot;%23d8d5c7&quot;/><rect x=&quot;20&quot; y=&quot;160&quot; width=&quot;360&quot; height=&quot;60&quot; fill=&quot;%23d8d5c7&quot;/><text x=&quot;20&quot; y=&quot;235&quot; font-family=&quot;sans-serif&quot; font-size=&quot;13&quot; fill=&quot;%234a5245&quot;>Captura real del dashboard pendiente — ver README</text></svg>'">
+      <div class="prototype-gallery">
+        <div class="prototype-tabs" aria-label="Vistas del dashboard">
+          <button class="prototype-tab" type="button" data-view="resumen" aria-pressed="true">Resumen</button>
+          <button class="prototype-tab" type="button" data-view="vaca" aria-pressed="false">Vaca individual</button>
+          <button class="prototype-tab" type="button" data-view="alertas" aria-pressed="false">Alertas</button>
+          <button class="prototype-tab" type="button" data-view="estadisticas" aria-pressed="false">Estadísticas</button>
+        </div>
+        <div class="prototype-figure" aria-live="polite">
+          <img data-view="resumen" src="assets/dashboard/dashboard-resumen.webp" alt="Resumen del dashboard de SMEB: total de vacas monitoreadas, alertas pendientes, gestantes confirmadas y capturas registradas en el día" loading="lazy">
+          <img data-view="vaca" src="assets/dashboard/dashboard-main.webp" alt="Historial de temperatura de una vaca individual por zona anatómica, comparado contra su línea base" loading="lazy" hidden>
+          <img data-view="alertas" src="assets/dashboard/dashboard-alertas.webp" alt="Panel de alertas de celo y gestación generadas a partir de variaciones de temperatura respecto a la línea base" loading="lazy" hidden>
+          <img data-view="estadisticas" src="assets/dashboard/dashboard-estadisticas.webp" alt="Estadísticas del rodeo: tasa de detección de celo, gestantes confirmadas y distribución de vacas por condición" loading="lazy" hidden>
+        </div>
       </div>
     </div>
   </section>
@@ -453,7 +459,7 @@
       <p style="color:#cdd3c6;">Sistema de Monitoreo de Embriones Bovinos</p>
       <p class="closing-brand">InnovaTecNM 2026 · Instituto Tecnológico de Nuevo León</p>
       <div class="btn-row" style="margin-top: var(--space-md);">
-        <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explorar el dashboard</a>
+        <a class="btn btn-primary" href="https://smeb.alexismorfinservices.com/index.html" target="_blank" rel="noopener">Explorar el dashboard<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
       </div>
       <!-- AGREGAR REDES SOCIALES REALES AQUI cuando el equipo las confirme:
       <div class="btn-row" style="margin-top: var(--space-sm);">
