@@ -478,39 +478,36 @@ button:focus-visible,
 /* ---------- 8. VIAJE DEL DATO ---------- */
 .dataflow {
   list-style: none;
-  margin: var(--space-lg) 0 0;
+  margin: var(--space-md) 0 0;
   padding: 0;
-  position: relative;
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: 1fr;
+  counter-reset: step;
 }
-.dataflow::before {
-  content: "";
-  position: absolute;
-  left: 1.1rem;
-  top: 0.6rem;
-  bottom: 0.6rem;
-  width: 2px;
-  background: linear-gradient(var(--color-thermal-cool), var(--color-thermal-mid), var(--color-thermal-hot));
-  opacity: 0.5;
+@media (min-width: 30rem) {
+  .dataflow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 56rem) {
+  .dataflow { grid-template-columns: repeat(4, 1fr); }
 }
 .dataflow-step {
-  position: relative;
-  padding-left: 3rem;
-  padding-bottom: var(--space-md);
+  border: 1px solid rgba(242, 241, 234, 0.16);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  background: rgba(242, 241, 234, 0.04);
 }
-.dataflow-step:last-child { padding-bottom: 0; }
 .dataflow-step::before {
-  content: "";
-  position: absolute;
-  left: 0.55rem;
-  top: 0.3rem;
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 50%;
-  background: var(--color-bg-deep);
-  border: 2px solid var(--color-thermal-mid);
+  counter-increment: step;
+  content: counter(step);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  color: var(--color-thermal-mid);
+  display: block;
+  margin-bottom: 0.3em;
 }
 .dataflow-step h4 { margin-bottom: 0.15em; color: #f2f1ea; }
-.dataflow-step p { color: #cdd3c6; margin-bottom: 0; }
+.dataflow-step p { color: #cdd3c6; margin-bottom: 0; font-size: var(--step--1); }
 
 /* ---------- 9. QUE OBSERVAMOS (mapa anatomico) ---------- */
 .anatomy {
@@ -523,9 +520,7 @@ button:focus-visible,
 }
 .anatomy-figure { position: relative; }
 
- .anatomy-figure img { width: 100%; border-radius: var(--radius); 
-  border: 1px solid var(--color-line); 
-}
+.anatomy-figure img { width: 100%; display: block; }
 
 .anatomy-hotspot {
   position: absolute;
@@ -554,11 +549,22 @@ button:focus-visible,
   border: 1px solid var(--color-line);
   border-left: 4px solid var(--color-thermal-mid);
   border-radius: var(--radius);
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   background: #fff;
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: anatomy-panel-in 0.35s var(--ease);
 }
 .anatomy-panel[hidden] { display: none; }
-.anatomy-panel h4 { margin-bottom: 0.3em; }
+.anatomy-panel h4 { margin-bottom: 0.5em; font-size: var(--step-2); }
+.anatomy-panel p { font-size: var(--step-1); }
+
+@keyframes anatomy-panel-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
 
 /* ---------- 10. DEL DATO A LA DECISION ---------- */
 .decision-flow {
