@@ -413,6 +413,10 @@ button:focus-visible,
 }
 .hero-figure img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Variante para logotipos: no recortar como si fuera foto, centrar sobre blanco */ 
+.hero-figure--logo { background: #fff; } 
+.hero-figure--logo img { object-fit: contain; padding: 2.5rem; }
+
 /* ---------- 6. PROBLEMA ---------- */
 .stat-row {
   display: grid;
